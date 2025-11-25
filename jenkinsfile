@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         REGISTRY = "gautamdevgrover"
-        IMAGE = "simplewala-todo-app2"
+        IMAGE = "simplewala-todo-app3"
     }
 
     stages {
