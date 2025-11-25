@@ -30,8 +30,9 @@ pipeline {
                       echo "Logging in to Docker Hub..."
                       echo $PASS | docker login -u $USER --password-stdin
 
-                      echo "Pushing Docker image..."
-                      docker push '${REGISTRY}/${IMAGE}':${BUILD_NUMBER}
+                      IMAGE_TO_PUSH="${REGISTRY}/${IMAGE}:${BUILD_NUMBER}"
+                      echo "Pushing Docker image: $IMAGE_TO_PUSH"
+                      docker push "$IMAGE_TO_PUSH"
                     '''
                 }
             }
