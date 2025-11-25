@@ -6,6 +6,7 @@ app.use(express.json());
 let todos = [
   { id: 1, title: "Learn Jenkins" },
   { id: 2, title: "Practice Docker" }
+  { id: 3, title: "Ci/Cd" }
 ];
 
 app.get('/todos', (req, res) => {
